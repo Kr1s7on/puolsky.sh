@@ -1,2 +1,2 @@
-# Packet Teacer Notes
+# Packet Tracer Notes
  Some of my Packet Tracer notes.

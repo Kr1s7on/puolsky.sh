@@ -46,7 +46,7 @@ enable
 enable
     write memory
 
-# Configure IP Addressing on the switch
+# Configure IP Addressing & subnet mask on the switch
 config t
     interface vlan 1
         ip address 192.168.1.253 255.255.255.0

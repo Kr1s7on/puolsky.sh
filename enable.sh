@@ -12,18 +12,18 @@ exit
 # Securing access to the console line
 config t
     line console 0
-    password cisco
+    password packettracerissofun
     login
 exit
 
 # Securing privileged mode access
 config t
-    enable password class
+    enable password ilovenetadmin
 exit
 
 # Configure an encrypted password to secure access to the privileged mode
 config t
-    enable secret cisco
+    enable secret y1s1daaa
 exit
 
 # Encrypt the enable and console passwords
@@ -39,7 +39,7 @@ exit
 #Verify that the configuration is accurate using the show run command
 enable
     copy running-config startup-config
-        [Enter]
+    [Enter]
 [OK]
 
 # Save the configuration
@@ -60,5 +60,5 @@ enable
 
 # Configure the default gateway
 config t
-    ip default-gateway
+    ip default-gateway 192.168.1.1
 exit

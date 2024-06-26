@@ -36,7 +36,7 @@ config t
     banner motd "Hello World!"
 exit
 
-#Verify that the configuration is accurate using the show run command
+# Verify that the configuration is accurate using the show run command
 enable
     copy running-config startup-config
     [Enter]

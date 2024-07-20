@@ -1,5 +1,126 @@
 # IT1304 Network Administration
 
+## Topic 1 - Networking Today
+
+### Notes
+
+- **Importance of Networking**:
+  - Facilitates communication and resource sharing.
+  - Essential for business operations, entertainment, and personal communication.
+- **Types of Networks**:
+  - **LAN (Local Area Network)**: Covers a small geographical area like a building.
+  - **WAN (Wide Area Network)**: Covers a large geographical area, such as a city or country.
+  - **MAN (Metropolitan Area Network)**: Covers a city or a large campus.
+  - **PAN (Personal Area Network)**: Covers a small area, typically around a person.
+- **Trends in Networking**:
+  - **IoT (Internet of Things)**: Connecting everyday objects to the internet.
+  - **BYOD (Bring Your Own Device)**: Employees using personal devices for work.
+  - **Cloud Computing**: Storing and accessing data and applications over the internet.
+
+### Quiz
+
+1. What is the primary function of a network?
+2. Differentiate between LAN and WAN.
+3. What does IoT stand for and what is its purpose?
+
+**Answers**:
+
+1. To facilitate communication and resource sharing.
+2. LAN covers a small geographical area, while WAN covers a large geographical area.
+3. IoT stands for Internet of Things, and its purpose is to connect everyday objects to the internet.
+
+## Topic 2 - Networking Protocols and Communications
+
+### Notes
+
+- **Protocols**: Rules and conventions for communication between network devices.
+  - **HTTP (HyperText Transfer Protocol)**: Used for web browsing.
+  - **FTP (File Transfer Protocol)**: Used for transferring files.
+  - **SMTP (Simple Mail Transfer Protocol)**: Used for sending emails.
+  - **TCP/IP (Transmission Control Protocol/Internet Protocol)**: Suite of protocols used for communication over the internet.
+- **Communication Models**:
+  - **OSI Model (Open Systems Interconnection)**: Seven-layer model for understanding network communication.
+    1. Physical Layer
+    2. Data Link Layer
+    3. Network Layer
+    4. Transport Layer
+    5. Session Layer
+    6. Presentation Layer
+    7. Application Layer
+  - **TCP/IP Model**: Four-layer model that includes:
+    1. Network Interface Layer
+    2. Internet Layer
+    3. Transport Layer
+    4. Application Layer
+
+### Quiz
+
+1. What is a protocol in networking?
+2. Name two common protocols used in networking.
+3. How many layers are there in the OSI model?
+
+**Answers**:
+
+1. A protocol is a set of rules and conventions for communication between network devices.
+2. HTTP (HyperText Transfer Protocol) and FTP (File Transfer Protocol).
+3. Seven layers.
+
+## Topic 3 - Physical Layer
+
+### Notes
+
+- **Purpose**: Responsible for the physical connection between devices.
+- **Functions**:
+  - **Transmission of Raw Data**: Converts digital data into electrical, optical, or radio signals.
+  - **Media Types**:
+    - **Copper Cables**: Twisted pair and coaxial cables.
+    - **Fiber Optic Cables**: Transmit data as light pulses.
+    - **Wireless**: Transmits data using radio waves.
+- **Standards**:
+  - **Ethernet**: Standard for wired networks.
+  - **Wi-Fi**: Standard for wireless networks.
+- **Key Devices**:
+  - **Hubs**: Connect multiple Ethernet devices, making them act as a single network segment.
+  - **Repeaters**: Amplify signals to extend the distance they can travel.
+
+### Quiz
+
+1. What is the primary purpose of the Physical Layer?
+2. Name two types of media used in the Physical Layer.
+3. What is the function of a repeater?
+
+**Answers**:
+
+1. To manage the physical connection between devices.
+2. Copper cables (e.g., twisted pair and coaxial) and fiber optic cables.
+3. A repeater amplifies signals to extend their travel distance.
+
+## Topic 4 - Data Link Layer
+
+### Notes
+
+- **Purpose**: Responsible for node-to-node data transfer and error detection/correction.
+- **Functions**:
+  - **Framing**: Encapsulates data into frames.
+  - **Error Detection and Correction**: Uses methods like CRC (Cyclic Redundancy Check).
+  - **Flow Control**: Manages data flow between sender and receiver.
+  - **MAC (Media Access Control)**: Controls how devices on a network gain access to data and permission to transmit it.
+- **Sub-layers**:
+  - **Logical Link Control (LLC)**: Manages communication between the network layer and the data link layer.
+  - **Media Access Control (MAC)**: Manages protocol access to the physical network medium.
+
+### Quiz
+
+1. What is the primary purpose of the Data Link Layer?
+2. Explain the function of framing in the Data Link Layer.
+3. What are the two sub-layers of the Data Link Layer and their functions?
+
+**Answers**:
+
+1. To handle node-to-node data transfer and error detection/correction.
+2. Framing involves encapsulating data into frames for transmission over the network.
+3. LLC (manages communication between the network layer and data link layer) and MAC (controls access to the physical network medium).
+
 ## Topic 4 - Data Link Layer
 
 ### Notes

@@ -1,5 +1,74 @@
 # IT1304 Network Administration
 
+<details>
+<summary>TLDR Version</summary>
+
+## Topic 1 - Networking Today
+
+- **Networking Types**: LAN, WAN, MAN, PAN.
+- **Trends**: IoT, BYOD, Cloud Computing.
+
+## Topic 2 - Networking Protocols and Communications
+
+- **Protocols**: HTTP, FTP, SMTP, TCP/IP.
+- **Models**: OSI (7 layers), TCP/IP (4 layers).
+
+## Topic 3 - Physical Layer
+
+- **Purpose**: Physical connection, transmission of raw data.
+- **Media**: Copper cables, fiber optic cables, wireless.
+- **Devices**: Hubs, repeaters.
+
+## Topic 4 - Data Link Layer
+
+- **Purpose**: Node-to-node data transfer, error detection/correction.
+- **Functions**: Framing, error detection, flow control, MAC.
+- **Sub-layers**: LLC, MAC.
+
+## Topic 5 - Network Layer
+
+- **Purpose**: Routing data packets across networks.
+- **Protocols**: IP, ICMP, ARP.
+- **Functions**: Addressing, packet forwarding, path determination.
+
+## Topic 6 & 7 - IPv4 Addressing
+
+- **IPv4 Structure**: 32-bit address, four octets.
+- **Classes**: A, B, C, D, E.
+- **Private Addresses**: Not routable on the internet (e.g., 192.168.x.x).
+
+## Topic 8 - IPv4 Subnetting
+
+- **Purpose**: Dividing a network into smaller sub-networks.
+- **CIDR**: Notation for defining IP ranges (e.g., /24).
+- **Subnet Mask**: Determines network and host portions of an IP address.
+
+## Topic 11 - Basic Router Configuration
+
+- **Purpose**: Directs data packets between networks.
+- **Commands**: `configure terminal`, `interface`, `ip address`, `no shutdown`.
+- **Security**: Setting passwords, access control lists (ACLs).
+
+## Topic 12 - IPv6 Addressing
+
+- **Structure**: 128-bit address, eight 16-bit blocks.
+- **Types**: Unicast, Anycast, Multicast.
+- **Formats**: Global Unicast, Link-Local, Unique Local.
+
+## Topic 13 - Transport Layer
+
+- **Purpose**: End-to-end communication services.
+- **Protocols**: TCP (reliable, connection-oriented), UDP (fast, connectionless).
+- **Functions**: Segmentation, error detection, flow control.
+
+## Topic 14 - Application Layer
+
+- **Purpose**: Provides network services to applications.
+- **Protocols**: HTTP, FTP, SMTP, DNS.
+- **Functions**: Data exchange, resource sharing.
+
+</details>
+
 ## Topic 1 - Networking Today
 
 ### Notes

@@ -82,44 +82,6 @@ config t
 
     # Enable IPv6 routing
     ipv6 unicast-routing
-
-    # Additional configurations
-
-    # Configure VLANs
-    vlan 10
-        name Sales
-    vlan 20
-        name Marketing
-
-    # Assign VLAN to an interface
-    interface fastethernet 0/1
-        switchport mode access
-        switchport access vlan 10
-
-    # Configure trunking on an interface
-    interface fastethernet 0/24
-        switchport mode trunk
-        switchport trunk allowed vlan 10,20
-
-    # Set up port security
-    interface fastethernet 0/1
-        switchport port-security
-        switchport port-security maximum 2
-        switchport port-security violation restrict
-        switchport port-security mac-address sticky
-
-    # Configure Spanning Tree Protocol (STP) to prevent loops
-    spanning-tree mode rapid-pvst
-    spanning-tree vlan 1 root primary
-
-    # Configure EtherChannel
-    interface range fastethernet 0/1 - 2
-        channel-group 1 mode active
-    interface port-channel 1
-        switchport mode trunk
-
-    # Enable CDP (Cisco Discovery Protocol)
-    cdp run
 exit
 
 # Save the configuration to startup-config

@@ -190,32 +190,6 @@
 2. Framing involves encapsulating data into frames for transmission over the network.
 3. LLC (manages communication between the network layer and data link layer) and MAC (controls access to the physical network medium).
 
-## Topic 4 - Data Link Layer
-
-### Notes
-
-- **Purpose**: Responsible for node-to-node data transfer and error detection/correction.
-- **Functions**:
-  - **Framing**: Encapsulates data into frames.
-  - **Error Detection and Correction**: Uses methods like CRC (Cyclic Redundancy Check).
-  - **Flow Control**: Manages data flow between sender and receiver.
-  - **MAC (Media Access Control)**: Controls how devices on a network gain access to data and permission to transmit it.
-- **Sub-layers**:
-  - **Logical Link Control (LLC)**: Manages communication between the network layer and the data link layer.
-  - **Media Access Control (MAC)**: Manages protocol access to the physical network medium.
-
-### Quiz
-
-1. What is the primary purpose of the Data Link Layer?
-2. Explain the function of framing in the Data Link Layer.
-3. What are the two sub-layers of the Data Link Layer and their functions?
-
-**Answers**:
-
-1. To handle node-to-node data transfer and error detection/correction.
-2. Framing involves encapsulating data into frames for transmission over the network.
-3. LLC (manages communication between the network layer and data link layer) and MAC (controls access to the physical network medium).
-
 ## Topic 5 - Network Layer
 
 ### Notes

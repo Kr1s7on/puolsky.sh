@@ -330,27 +330,47 @@
 ### Notes
 
 - **IPv6 Address Structure**: 128-bit address divided into eight 16-bit blocks.
+  - **Representation**: Written as eight groups of four hexadecimal digits, separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
+  - **Zero Compression**: Consecutive sections of zeros can be replaced with "::" (e.g., 2001:0db8::0370:7334).
+  - **Leading Zero Compression**: Leading zeros in a block can be omitted (e.g., 2001:db8:85a3::8a2e:370:7334).
 - **Types of IPv6 Addresses**:
   - **Unicast**: Identifies a single interface.
+    - **Global Unicast**: Routable on the internet, similar to IPv4 public addresses.
+    - **Link-Local**: Used for communication within the local network segment (fe80::/10).
+    - **Unique Local**: Similar to IPv4 private addresses, used within a site or organization (fc00::/7).
   - **Anycast**: Assigned to a group of interfaces, but the packet is delivered to the nearest one.
-  - **Multicast**: Delivered to multiple interfaces.
+  - **Multicast**: Delivered to multiple interfaces (ff00::/8).
+    - **Solicited-Node Multicast**: Used in Neighbor Discovery Protocol (NDP) to find other nodes on the same link.
 - **Address Format**:
   - **Global Unicast**: Routable on the internet, similar to IPv4 public addresses.
   - **Link-Local**: Used for communication within the local network segment.
   - **Unique Local**: Similar to IPv4 private addresses.
 - **Prefix Notation**: Similar to CIDR, e.g., 2001:0db8::/32.
+  - **Subnetting**: IPv6 allows for extensive subnetting due to its large address space.
+- **IPv6 Features**:
+  - **Larger Address Space**: 128-bit addresses provide a vastly larger address space compared to IPv4's 32-bit addresses.
+  - **Simplified Header**: IPv6 has a simplified header for more efficient processing.
+  - **No Broadcast**: IPv6 uses multicast and anycast instead of broadcast.
+  - **Auto-Configuration**: Supports stateless address auto-configuration (SLAAC) for easier network management.
+  - **Built-in Security**: IPv6 was designed with IPsec support for end-to-end encryption and authentication.
 
 ### Quiz
 
 1. How many bits are in an IPv6 address?
 2. What type of IPv6 address is similar to an IPv4 public address?
 3. Explain the purpose of link-local addresses.
+4. What is the significance of the "::" notation in IPv6?
+5. What is the difference between unicast, anycast, and multicast addresses in IPv6?
+6. How does IPv6 handle address auto-configuration?
 
 **Answers**:
 
 1. 128 bits.
 2. Global Unicast address.
 3. Link-local addresses are used for communication within the local network segment.
+4. The "::" notation in IPv6 is used for zero compression, allowing consecutive sections of zeros to be replaced with "::".
+5. Unicast addresses identify a single interface, anycast addresses are assigned to a group of interfaces but deliver packets to the nearest one, and multicast addresses deliver packets to multiple interfaces.
+6. IPv6 handles address auto-configuration through Stateless Address Auto-Configuration (SLAAC), allowing devices to configure their own addresses without the need for a DHCP server.
 
 ## Topic 13 - Transport Layer
 
@@ -359,23 +379,45 @@
 - **Purpose**: Provides end-to-end communication services for applications.
 - **Protocols**:
   - **TCP (Transmission Control Protocol)**: Connection-oriented, reliable, and ensures data delivery.
+    - **Features**:
+      - **Three-Way Handshake**: Establishes a connection using SYN, SYN-ACK, and ACK packets.
+      - **Acknowledgments**: Confirms receipt of data packets.
+      - **Retransmissions**: Resends lost or corrupted packets.
+      - **Flow Control**: Uses windowing to manage data flow.
+      - **Congestion Control**: Adjusts the rate of data transmission to avoid network congestion.
   - **UDP (User Datagram Protocol)**: Connectionless, faster, but no guarantee of delivery.
+    - **Features**:
+      - **Low Overhead**: Minimal protocol mechanism, leading to faster transmission.
+      - **No Acknowledgments**: Does not confirm receipt of data packets.
+      - **No Retransmissions**: Does not resend lost or corrupted packets.
+      - **Suitable for Real-Time Applications**: Ideal for applications like video streaming and online gaming where speed is crucial.
 - **Functions**:
   - **Segmentation**: Divides large messages into smaller segments.
+    - **Reassembly**: Combines segments back into the original message at the destination.
   - **Error Detection**: Checks for errors in transmitted data.
+    - **Checksum**: Used to verify data integrity.
   - **Flow Control**: Manages the rate of data transmission between sender and receiver.
+    - **Sliding Window Protocol**: Adjusts the window size based on network conditions.
+  - **Multiplexing**: Allows multiple applications to use the network simultaneously.
+    - **Port Numbers**: Identifies specific processes or services on a device.
 
 ### Quiz
 
 1. What are the two main protocols used in the Transport Layer?
 2. What is the difference between TCP and UDP?
 3. What is segmentation in the Transport Layer?
+4. Describe the three-way handshake process in TCP.
+5. What is the purpose of flow control in the Transport Layer?
+6. How does UDP handle error detection and correction?
 
 **Answers**:
 
 1. TCP (Transmission Control Protocol) and UDP (User Datagram Protocol).
 2. TCP is connection-oriented and reliable, while UDP is connectionless and faster but does not guarantee delivery.
 3. Segmentation divides large messages into smaller segments for transmission.
+4. The three-way handshake process in TCP involves three steps: SYN (synchronize) packet sent by the client, SYN-ACK (synchronize-acknowledge) packet sent by the server, and ACK (acknowledge) packet sent by the client to establish a connection.
+5. The purpose of flow control in the Transport Layer is to manage the rate of data transmission between the sender and receiver to prevent overwhelming the receiver.
+6. UDP does not handle error detection and correction; it relies on the application layer to manage these aspects if necessary.
 
 ## Topic 14 - Application Layer
 
@@ -384,24 +426,50 @@
 - **Purpose**: Provides network services to applications.
 - **Common Protocols**:
   - **HTTP (HyperText Transfer Protocol)**: Used for web browsing.
+    - **Features**:
+      - **Stateless Protocol**: Each request is independent.
+      - **Methods**: GET, POST, PUT, DELETE, etc.
+      - **HTTPS**: Secure version using SSL/TLS.
   - **FTP (File Transfer Protocol)**: Used for transferring files.
+    - **Features**:
+      - **Control and Data Connections**: Uses separate connections for control commands and data transfer.
+      - **Modes**: Active and Passive modes.
+      - **Authentication**: Can require username and password.
   - **SMTP (Simple Mail Transfer Protocol)**: Used for sending emails.
+    - **Features**:
+      - **Push Protocol**: Sends emails from client to server.
+      - **Ports**: Typically uses port 25.
+      - **Authentication**: Supports various authentication mechanisms.
   - **DNS (Domain Name System)**: Translates domain names to IP addresses.
+    - **Features**:
+      - **Hierarchical Structure**: Organized in a tree-like structure.
+      - **Records**: A, AAAA, CNAME, MX, etc.
+      - **Caching**: Reduces the load on authoritative servers.
 - **Functions**:
   - **Data Exchange**: Facilitates data exchange between applications.
+    - **Examples**: Web browsing, file transfers, email communication.
   - **Resource Sharing**: Allows applications to share network resources.
+    - **Examples**: Printers, file servers, databases.
+  - **Protocol Translation**: Converts data from one protocol to another.
+    - **Examples**: Gateway devices, proxy servers.
 
 ### Quiz
 
 1. What is the primary purpose of the Application Layer?
 2. Name two common protocols used in the Application Layer.
 3. What is the role of DNS?
+4. What are the main features of HTTP?
+5. How does FTP handle file transfers?
+6. What port does SMTP typically use?
 
 **Answers**:
 
 1. To provide network services to applications.
 2. HTTP (HyperText Transfer Protocol) and FTP (File Transfer Protocol).
 3. DNS translates domain names to IP addresses.
+4. HTTP is a stateless protocol with methods like GET, POST, PUT, DELETE, and has a secure version called HTTPS.
+5. FTP handles file transfers using separate control and data connections, supports active and passive modes, and can require authentication.
+6. SMTP typically uses port 25.
 
 ## Glossary
 

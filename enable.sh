@@ -1,6 +1,6 @@
 # =====================================================================
 
-# Compiled Commands for Cisco Packet Tracer by Kr1s7on
+# compiled commands for Cisco Packet Tracer
 
 #                               \\\\\\\
 #                             \\\\\\\\\\\\

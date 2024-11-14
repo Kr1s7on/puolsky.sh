@@ -1,7 +1,7 @@
 # puolsky.sh
 
 ```shell
-echo "Commands I've compiled for IT1304 Network Administration."
+echo "stuff for network addministration."
 ```
 
 ```shell

@@ -307,6 +307,7 @@
   - **Representation**: Written as eight groups of four hexadecimal digits, separated by colons (e.g., 2001:0db8:85a3:0000:0000:8a2e:0370:7334).
   - **Zero Compression**: Consecutive sections of zeros can be replaced with "::" (e.g., 2001:0db8::0370:7334).
   - **Leading Zero Compression**: Leading zeros in a block can be omitted (e.g., 2001:db8:85a3::8a2e:370:7334).
+
 - **Types of IPv6 Addresses**:
   - **Unicast**: Identifies a single interface.
     - **Global Unicast**: Routable on the internet, similar to IPv4 public addresses.
@@ -315,12 +316,15 @@
   - **Anycast**: Assigned to a group of interfaces, but the packet is delivered to the nearest one.
   - **Multicast**: Delivered to multiple interfaces (ff00::/8).
     - **Solicited-Node Multicast**: Used in Neighbor Discovery Protocol (NDP) to find other nodes on the same link.
+
 - **Address Format**:
   - **Global Unicast**: Routable on the internet, similar to IPv4 public addresses.
   - **Link-Local**: Used for communication within the local network segment.
   - **Unique Local**: Similar to IPv4 private addresses.
+
 - **Prefix Notation**: Similar to CIDR, e.g., 2001:0db8::/32.
   - **Subnetting**: IPv6 allows for extensive subnetting due to its large address space.
+
 - **IPv6 Features**:
   - **Larger Address Space**: 128-bit addresses provide a vastly larger address space compared to IPv4's 32-bit addresses.
   - **Simplified Header**: IPv6 has a simplified header for more efficient processing.
